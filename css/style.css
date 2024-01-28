@@ -1,0 +1,776 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Custom Properties, update these for your own design */
+
+:root {
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
+    
+    --fw-reg: 300;
+    --fw-bold: 900;
+    
+    --clr-light: #313131;
+    --clr-dark: #e9dad1;
+    --clr-accent: #e14747;
+    
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+    
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+          0.125em 0.125em 0.25em rgba(0,0,0,.15);
+}
+
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+
+
+}
+
+@media (max-width: 800px) {
+    body {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* General styles */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+
+section {
+    padding: 5em 2em;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+strong { font-weight: var(--fw-bold) }
+
+:focus {
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 3px;
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    padding: .5em 2.5em;
+    background: var(--clr-accent);
+    color: var(--clr-light);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+    align-self: center;
+    margin: .5rem;
+    outline: 1px solid var(--clr-accent);
+}
+
+.btn:hover {
+    transition: .3s ease;
+    background-color: transparent;
+    color: var(--clr-accent);
+}
+
+.btn-alt {
+    display: inline-block;
+    padding: .5em 2.5em;
+    background: transparent;
+    color: var(--clr-accent);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+    align-self: center;
+    margin: .5rem;
+    outline: 1px solid var(--clr-accent);
+}
+
+.btn-alt:hover {
+    transition: .3s ease;
+    background-color: var(--clr-accent);
+    color: var(--clr-light);
+}
+
+/* Typography */
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+    margin: 0;
+}
+
+h1 { font-size: var(--fs-h1) }
+h2 { font-size: var(--fs-h2) }
+h3 { font-size: var(--fs-h3) }
+
+
+.section__title {
+    margin-bottom: .25em;
+    font-weight: var(--fw-reg);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section__title--intro {
+    font-weight: var(--fw-reg);
+}
+
+.section__title--intro strong {
+    display: block;
+}
+
+.section__subtitle {
+    margin: 0;
+    font-size: var(--fs-h3);
+}
+/* header */
+.logo {
+    color: var(--clr-accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    margin:0 3rem;
+}
+
+.nav {
+    top: -50px;
+    background: var(--clr-light);
+    display: flex;
+    width: 100%;
+    color: var(--clr-light);
+    position: fixed;
+    z-index: 3;
+    border: none;
+    transition: ease .3s;
+    align-items: center;
+    padding: 0;
+    box-shadow: var(--bs);
+}
+
+.nav__link {
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+}
+
+.hover-underline-animation {
+    position: relative;
+    color: var(--clr-accent);
+}
+  
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--clr-accent);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+  
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/*  Intro section  */
+
+.intro {
+    display: grid;
+    grid-template-columns: 2fr 3fr; /* Allocate more space for the text column */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center the entire grid horizontally */
+    gap: 4em; /* Space between columns */
+}
+
+.intro-content {
+    order: 2; /* Ensure content comes first in the HTML flow (for accessibility) */
+}
+
+.intro__img {
+    order: 1; /* Image will be placed second */
+    max-width: 60%;
+    height: auto;
+    justify-self: end; /* Align image to the end of the grid column */
+    border-radius: 50%; /* Rounded image */
+    box-shadow: var(--bs);
+}
+
+.intro-name {
+    font-size: var(--fs-h1);
+    color: var(--clr-accent);
+}
+
+.intro-links {
+    margin: 0px;
+    margin-right: 1rem;
+}
+
+@media (max-width: 800px) { /* Adjust breakpoint as needed */
+    .intro {
+        grid-template-columns: 1fr; /* Stack items on top of each other on smaller screens */
+        text-align: center !important; /* Center the text for smaller screens */
+    }
+
+    .intro-content,
+    .intro__img {
+        order: 0; /* Reset the order for stacking */
+    }
+
+    .intro__img {
+        justify-self: center; /* Center the image on smaller screens */
+        width: 80%; /* Adjust the width to fit the screen */
+        margin: 0 auto; /* Additional centering for the image */
+    }
+}
+
+/*  Body section  */
+
+.body {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-content: center; /* Center the entire grid horizontally */
+    align-items: start; /* Align the grid items to the top */
+    padding: 2rem;
+    margin: auto; /* Additional centering */
+}
+
+.body-tabs {
+    font-size: .9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    justify-self: end;
+    border-right: 1px solid #cccccc39;
+}
+
+.tab-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.tab {
+    cursor: pointer;
+    padding: 0.5rem 0.5rem;
+    padding-right: 4rem;
+    margin-bottom: 0.5rem;
+}
+
+.tab.active {
+    color: var(--clr-dark);
+}
+
+.body-content {
+    padding-left: 2rem;
+}
+
+.content-item {
+    display: none;
+}
+
+.content-item.active {
+    display: block;
+}
+
+@media (max-width: 800px) {
+    .body {
+        display: block;
+        justify-content: center; /* Center the entire grid horizontally */
+        align-items: start; /* Align the grid items to the top */
+        padding: 2rem;
+        margin: auto; /* Additional centering */
+    }
+
+    .tab-list {
+        flex-direction: row; /* Make tabs horizontal */
+        justify-content: center; /* Center tabs if needed */
+        flex-wrap: wrap; /* Wrap tabs to new line if they don't fit */
+    }
+
+    .tab {
+        margin-right: 0.5em; /* Add space between tabs, adjust as needed */
+        margin-bottom: 0; /* Remove bottom margin if set in default */
+        padding: 1rem;
+    }
+
+}
+
+/* Education */
+
+.body-list {
+    list-style-type: none; /* Removes default list styling */
+    padding-left: 0; /* Removes default padding */
+}
+
+.body-item {
+    margin-bottom: 1rem; /* Space between education entries */
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.sub-heading {
+    font-weight: var(--fw-bold);
+}
+
+.heading {
+    display: block; /* Puts the degree on a new line */
+    font-weight: var(--fw-reg);
+    padding-bottom: 0.5rem;
+}
+
+.dates,
+.location {
+    display: block; /* Puts dates and location on new lines */
+    font-style: italic;
+    font-size: .9rem;
+}
+
+.detail-title {
+    padding-top: 1rem;
+    font-size: .9rem;
+    margin: 0;
+}
+
+.detail {
+    list-style-type: circle; /* Adds bullet points */
+    padding-left: 3rem; /* Indentation for the coursework list */
+    font-size: .9rem;
+}
+
+@media (max-width: 800px) {
+    .dates,
+    .location {
+        display: inline; /* Puts dates and location on new lines */
+        font-style: italic;
+        font-size: .8rem;
+    }
+
+    .detail {
+        list-style-type: none;
+        padding: 0;
+        font-size: .9rem;
+    }
+}
+
+/* Project Modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.6); /* Black background with opacity */
+}
+
+.modal-content {
+    background-color: var(--clr-light);
+    margin: 5% auto; /* Adjusted for better visibility */
+    padding: 2rem;
+    gap: 2rem;
+    width: 80%; /* Adjust width as needed */
+    display: flex; /* Make this a flex container */
+    align-items: flex-start; /* Align items to the start of the flex container */
+    position: relative; /* For absolute positioning of the close button */
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute; /* Absolute positioning to place it on the top right corner */
+    top: 10px; /* Adjust as needed */
+    right: 15px; /* Adjust as needed */
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.modal-img {
+    max-width: 30%; /* Increase the width of the image */
+    height: auto;
+    margin-right: 20px; /* Add some space between the image and the text */
+    box-shadow: var(--bs);
+    object-fit: cover; /* Ensure the image covers the area without distorting */
+    flex: 1; 
+}
+
+/* Style adjustments for the text content to take remaining space */
+.text-content {
+    width: 50%;
+    /* Allow the text content to fill the remaining space */
+}
+
+/* Ensure modal content does not overflow the viewport */
+@media (max-width: 768px) {
+    .modal-content {
+        flex-direction: column; /* Stack image and text vertically on smaller screens */
+    }
+    .modal-img {
+        max-width: 100%;
+        margin-bottom: 20px; /* Add space between the image and text */
+    }
+    .text-content {
+        max-width: 100%;
+    }
+}
+
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-section-heading {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+}
+
+.modal-content {
+    order: 2;
+}
+
+.modal-title {
+    font-size: 2rem;
+}
+
+.modal-subtitle {
+    margin: 0;
+    font-size: var(--fs-h3);
+    padding-bottom: 1rem;
+    line-height: 1.75rem;
+}
+
+.modal-link {
+    font-style: italic;
+    color: var(--clr-dark);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--clr-dark);
+}
+
+.modal-link:hover {
+    color: var(--clr-accent);
+    border-bottom: 1px solid var(--clr-accent);
+    transition: ease .3s;
+}
+
+
+/* Project Page */
+
+.vis {
+    position:relative;
+    top: 0;
+    padding: 1rem;
+}
+
+.project {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Allocate more space for the text column */
+    justify-content: center; /* Center the entire grid horizontally */
+    gap: 4em; /* Space between columns */
+}
+
+.project-img {
+    order: 1; /* Image will be placed second */
+    height: auto;
+    width: 100%;
+    justify-self: start; /* Align image to the end of the grid column */
+    box-shadow: var(--bs);
+}
+
+.project-section-heading {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+}
+
+.project-content {
+    order: 2;
+}
+
+.project-title {
+    font-size: 2rem;
+}
+
+.project-link {
+    font-style: italic;
+    color: var(--clr-dark);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--clr-dark);
+}
+
+.project-link:hover {
+    color: var(--clr-accent);
+    border-bottom: 1px solid var(--clr-accent);
+    transition: ease .3s;
+}
+
+/*  My services section  */
+
+.my-services {
+    background-color: var(--clr-dark);
+    background-image: url(../img/services-bg.jpg);
+    background-size: cover;
+    /* background-blend-mode: multiply; */
+    color: var(--clr-light);
+    text-align: center;
+}
+
+.section__title--services {
+    color: var(--clr-accent);
+    position: relative;
+}
+
+.section__title--services::after {
+    content: '';
+    display: block;
+    width: 2em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: var(--clr-light);
+    opacity: 0.25;
+}
+
+.services {
+    margin-bottom: 4em;
+}
+
+.service {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+    .services {
+        display: flex;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .service + .service {
+        margin-left: 2em;
+    }
+}
+
+
+.about-me {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-me__img {
+    box-shadow: var(--bs);
+}
+
+@media (min-width: 600px) {
+    .about-me {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-areas: 
+            "title img"
+            "subtitle img"
+            "text img";
+        grid-column-gap: 2em;
+    }
+    
+    .section__title--about {
+        grid-area: title;
+    }
+    
+    .section__subtitle--about {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        position: relative;
+        left: -1em;
+        width: calc(100% + 2em);
+        padding-left: 1em;
+        padding-right: calc(200px + 4em);
+    }
+    
+    .about-me__img {
+        grid-area: img;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+/* My Work */
+
+.my-work {
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+    text-align: center;    
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.portfolio__item {
+    background: var(--clr-accent);
+    overflow: hidden;
+    margin: 1rem;
+    position: relative;
+    height: 200px; /* Adjust as needed */
+    align-self: center;
+    transition: filter 250ms linear;
+}
+
+.portfolio__img {
+    width: 100%;
+    height: auto;
+    object-fit:fill;
+    filter: brightness(.4);
+    transition: transform 750ms cubic-bezier(.5, 0, .5, 1), opacity 250ms linear;
+}
+
+.portfolio__item:focus {
+    position: relative;
+    z-index: 2;
+}
+
+.portfolio__img:hover,
+.portfolio__item:focus .portfolio__img {
+    transform: scale(1.2);
+    opacity: .5;
+}
+
+.portfolio__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--clr-dark);
+    font-size: 1.5rem;
+    text-align: center;
+    pointer-events: none;
+}
+
+/* footer */
+
+.footer {
+    background: #111;
+    color: var(--clr-accent);
+    text-align: center;
+    padding: 2.5em 0;
+    font-size: var(--fs-h3);
+
+}
+
+.footer a { 
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer__link {
+    color: var(--clr-accent);
+    font-weight: var(--fw-bold);
+}
+
+.footer__link:hover,
+.social-list__link:hover {
+    opacity: .7;
+}
+
+.footer__link:hover {
+    color: var(--clr-accent);
+    text-decoration: underline;
+}
+
+.social-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 2em 0 0;
+    padding: 0;
+}
+
+.social-list__item {
+    margin: 0 .5em;
+    color: var(--clr-accent);
+}
+
+.social-list__link {
+    background: transparent;
+    color: var(--clr-accent);
+    text-align: center;
+    font-size: var(--fs-h3);
+    padding: 0 .5em;
+}
+
+
+/* Individual portfolio item styles */
+
+.portfolio-item-individual {
+    padding: 0 2em 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.portfolio-item-individual p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}

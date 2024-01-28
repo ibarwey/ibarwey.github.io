@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hi, I'm Ishna</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+        
+        <!-- Update these with your own fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body>
+        <nav class="nav" id="navbar">
+            <a href="#home" class="nav__link logo"> Ishna Barwey </a>
+            <a id="download-cv" href="nav__link mailto:ibarwey@berkeley.edu" class="intro-links btn">Contact Me</a>
+            <a id="download-cv" class="nav__link intro-links btn-alt">Download CV</a>
+            <a href="https://linkedin.com" class="nav__link social-list__link linkedin"><i class="fab fa-linkedin"></i></a>
+            <a href="https://kaggle.com" class="nav__link social-list__link kaggle"><i class="fab fa-kaggle"></i></a>
+            <a href="https://github.com" class="nav__link social-list__link github"><i class="fab fa-github"></i></a>
+            <!-- <a href="#home" class="nav__link hover-underline-animation">Home</a>
+            <a href="#resume" class="nav__link hover-underline-animation">Resume</a>
+            <a href="#about" class="nav__link hover-underline-animation">About me</a>
+            <a href="#work" class="nav__link hover-underline-animation">My Work</a>
+            <a href="mailto:ibarwey@berkeley.edu" class="btn">Contact Me</a> -->
+        </nav>
+
+        <!-- Introduction -->
+        <section class="intro" id="home">
+            <div class="intro-content">
+                <h3 class="section__title--intro">Hi, There! I'm<br><strong class="intro-name">Ishna Barwey</strong></h3>
+                <div class="intro-description">Data Scientist and Master's student based in the Bay Area, <br/>Actively searching for entry-level industry positions.</div>
+                <div>
+                    <a id="download-cv" href="mailto:ibarwey@berkeley.edu" class="intro-links btn">Contact Me</a>
+                    <a id="download-cv" class="intro-links btn-alt">Download CV</a>
+                    <a href="https://linkedin.com" class="social-list__link linkedin"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://kaggle.com" class="social-list__link kaggle"><i class="fab fa-kaggle"></i></a>
+                    <a href="https://github.com" class="social-list__link github"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <img src="img/dev-jane-01.jpg" alt="Jane Smith smiling" class="intro__img">
+        </section>
+
+        <!-- Body -->
+
+        <section class="body" id="body">
+            <div class="body-tabs">
+                <ul class="tab-list">
+                    <li class="tab active hover-underline-animation" data-target="about-content">About Me</li>
+                    <li class="tab hover-underline-animation" data-target="projects-content">Projects</li>
+                    <li class="tab hover-underline-animation" data-target="education-content">Education</li>
+                    <li class="tab hover-underline-animation" data-target="skills-content">Skills</li>
+                </ul>
+            </div>
+            <div class="body-content">
+
+                <!-- About Me -->
+                <div class="content-item active" id="about-content">
+                    <h3 class="section__title">About Me</h3>
+                    <p>I'm a current Master's student at UC Berkeley studying Data Science. I was born and raised in Phoenix, Arizona, but the Bay Area has captivated me. Outside of work, I enjoy language exchange, hiking, road trips, crochet, and watching TV.</p>
+                    <p>I have an interest in Natural Language Processing (NLP) and its applications. I've also done personal reading and research in linguistics. Fun fact: I know 4 languages right now -- English, Hindi, Spanish, and Korean -- and I hope to learn more.</p>
+                    <p>Thank you for visiting my page!</p>
+                </div>
+
+                <!-- Education -->
+                <div class="content-item" id="education-content">
+                    <h3 class="section__title">Education</h3>
+                    <ul class="body-list">
+                        <li class="body-item">
+                            <span class="sub-heading">University of California, Berkeley</span>
+                            <h3 class="heading">Master of Engineering, Data Science and Systems</h3>
+                            <span class="dates">Aug. 2023 - May 2024,</span>
+                            <span class="location">Berkeley, CA</span>
+                            <p class="detail-title">Relevant Coursework:</p>
+                            <ul class="detail">
+                                <li>Capstone Project</li>
+                                <li>Natural Language Processing</li>
+                                <li>Machine Learning</li>
+                                <li>Applications of Parallel Computing</li>
+                                <li>Product Management</li>
+                                <li>Technology Strategy</li>
+                            </ul>
+                        </li>
+                        <li class="education-item">
+                            <span class="sub-heading">Arizona State University (Barrett, the Honors College)</span>
+                            <h3 class="heading">Bachelor of Science, Computer Science; Minor, Korean Studies</h3>
+                            <span class="dates">Aug. 2019 - May 2023,</span>
+                            <span class="location">Tempe, AZ</span>
+                            <p class="detail-title">Relevant Coursework:</p>
+                            <ul class="detail">
+                                <li>Artificial Intelligence</li>
+                                <li>Data Mining</li>
+                                <li>Database Management</li>
+                                <li>Data Structures & Algortihms</li>
+                                <li>Human Computer Interaction</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div> 
+
+                <!-- Skills -->               
+                <div class="content-item" id="skills-content">
+                    <h3 class="section__title">Skills</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                </div>
+
+                <!-- Projects -->
+                <div class="content-item" id="projects-content">
+                    <h3 class="section__title">Projects</h3>
+                    <div class="portfolio">
+
+                        <div class="portfolio__item" data-project-id="project3">
+                            <img src="img/world.jpeg" alt="" class="portfolio__img">
+                            <div class="portfolio__overlay">Disambiguating the World's Inventors</div>
+                        </div>
+
+                        <div class="portfolio__item" data-project-id="project1">
+                            <img src="img/imgmap-1_none.png" alt="" class="portfolio__img">
+                            <div class="portfolio__overlay">DHS Baggage Classification</div>
+                        </div>
+
+                        <div class="portfolio__item" data-project-id="project2">
+                            <img src="img/project2.jpeg" alt="" class="portfolio__img">
+                            <div class="portfolio__overlay">Medical Query Translation</div>
+                        </div>
+
+                        <div class="portfolio__item" data-project-id="project4">
+                            <img src="img/portfolio-04.jpg" alt="" class="portfolio__img">
+                            <div class="portfolio__overlay">NASA Psyche VR Experience</div>
+                        </div>
+
+                        <div class="portfolio__item" data-project-id="project5">
+                            <img src="img/portfolio-05.jpg" alt="" class="portfolio__img">
+                            <div class="portfolio__overlay">NASA Psyche VR Experience</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal Structure -->
+        <div id="projectModal" class="modal">
+            <div class="modal-content">
+                <img class="modal-img">
+                <div class="text-content">
+                    <h2 class="modal-title"></h2>
+                    <p class="modal-subtitle"></p>
+                    <div><strong class="project-section-heading">Organization: </strong><span class="modal-org"></span></div>
+                    <div><strong class="project-section-heading">Dates: </strong><span class="modal-dates"></span></div>
+                    <br/>
+                    <h3 class="project-section-heading">Summary:</h3>
+                    <p class="modal-summary"></p>
+                    <h3 class="project-section-heading">Skills:</h3>
+                    <ul class="modal-skills"></ul>
+                    <a href="#" class="project-section-heading modal-link"></a>
+                </div>
+                <span class="close-button">&times;</span>
+            </div>
+        </div>
+        
+
+        
+        
+        
+        <!-- My services -->
+        <!-- <section class="my-services" id="services">
+            <h2 class="section__title section__title--services">What I do</h2>
+            <div class="services">
+                <div class="service">
+                    <h3>Design + Development</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div> 
+                
+                <div class="service">
+                    <h3>E-Commerce</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div> 
+                
+                <div class="service">
+                    <h3>WordPress</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div> 
+            
+            <a href="#work" class="btn">My Work</a>
+        </section> -->
+        
+        <!-- Footer -->
+        <!-- <footer class="footer">
+            <a href="mailto:hello@jane.dev" class="footer__link">hello@jane.dev</a>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://codepen.io">
+                        <i class="fab fa-codepen"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="http://dribbble.com">
+                        <i class="fab fa-dribbble"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://twitter.com">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer> -->
+        
+        
+        <script src="js/index.js"></script>
+        
+    </body>
+</html>
