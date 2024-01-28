@@ -13,9 +13,9 @@
     --fw-reg: 300;
     --fw-bold: 900;
     
-    --clr-one: #121212;
-    --clr-two: #dbdbdb;
-    --clr-accent: #619e5b;
+    --clr-one: #e5e5e5;
+    --clr-two: #373833;
+    --clr-accent: #dd2e2e;
     
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -280,7 +280,7 @@ a:focus {
     letter-spacing: 2px;
     font-weight: var(--fw-bold);
     justify-self: end;
-    border-right: 1px solid #cccccc39;
+    border-right: 1px solid #cccccc;
 }
 
 .tab-list {
@@ -345,7 +345,7 @@ a:focus {
 .body-item {
     margin-bottom: 1rem; /* Space between education entries */
     padding-bottom: 1rem;
-    border-bottom: 1px solid #cccccc4d;
+    border-bottom: 1px solid #cccccc;
 }
 
 .sub-heading {
@@ -554,7 +554,7 @@ a:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--clr-two);
+    color: var(--clr-one);
     font-size: 1.5rem;
     text-align: center;
     pointer-events: none;
