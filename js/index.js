@@ -22,7 +22,7 @@ const projects = {
     'project3': {
         title: 'Disambiguating the World\'s Inventors',
         subtitle: 'Using NLP and deep learning to classify patents by inventors on a world scale.',
-        organization: '',
+        organization: 'Master of Engineering Capstone Project',
         dates: 'September 2023 - May 2024',
         summary: 'Our team, working closely with Professor Lee Fleming and Emma Scharfmann, aims to use ML tools to identify when patents in the world patent database are by the same inventor. I serve as the team\'s Point of Contact as well as a technical lead. This involves firstly processing our data, to use in models then putting patents through a Patent2Vec model which employs BERT, then putting patents through a deep learning model which computes similarity scores between patents. Our next goal is to employ a clustering model to form clusters of patents with the same inventors. We hope to run this on the PatStat database this Spring and provide the disambiguated dataset as data for further patent research.',
         skills: ['Data Processing', 'Deep Learning', 'Fine Tuning', 'Clustering'],
