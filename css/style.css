@@ -13,9 +13,9 @@
     --fw-reg: 300;
     --fw-bold: 900;
     
-    --clr-one: #e5e5e5;
-    --clr-two: #373833;
-    --clr-accent: #dd2e2e;
+    --clr-one: #181938;
+    --clr-two: #e6e6e6;
+    --clr-accent: #bba2ea;
     
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -406,7 +406,7 @@ a:focus {
 }
 
 .modal-content {
-    background-color: var(--clr-one);
+    background-color: var(--clr-two);
     margin: 5% auto; /* Adjusted for better visibility */
     padding: 2rem;
     gap: 2rem;
@@ -414,10 +414,11 @@ a:focus {
     display: flex; /* Make this a flex container */
     align-items: flex-start; /* Align items to the start of the flex container */
     position: relative; /* For absolute positioning of the close button */
+    border-radius: 20px;
 }
 
 .close-button {
-    color: #aaa;
+    color: var(--clr-accent);
     position: absolute; /* Absolute positioning to place it on the top right corner */
     top: 10px; /* Adjust as needed */
     right: 15px; /* Adjust as needed */
@@ -428,7 +429,7 @@ a:focus {
 
 .close-button:hover,
 .close-button:focus {
-    color: black;
+    color: var(--clr-one);
     text-decoration: none;
 }
 
@@ -444,6 +445,7 @@ a:focus {
 /* Style adjustments for the text content to take remaining space */
 .text-content {
     width: 50%;
+    color: var(--clr-one)
     /* Allow the text content to fill the remaining space */
 }
 
@@ -500,9 +502,9 @@ a:focus {
 
 .modal-link {
     font-style: italic;
-    color: var(--clr-two);
+    color: var(--clr-one);
     text-decoration: none;
-    border-bottom: 1px dashed var(--clr-two);
+    border-bottom: 1px dashed var(--clr-one);
 }
 
 .modal-link:hover {
@@ -521,16 +523,17 @@ a:focus {
     overflow: hidden;
     margin: 1rem;
     position: relative;
-    height: 200px; /* Adjust as needed */
+    height: 175px; /* Adjust as needed */
     align-self: center;
     transition: filter 250ms linear;
+    border-radius: 20px;
 }
 
 .portfolio__img {
     width: 100%;
     height: auto;
     object-fit:fill;
-    filter: brightness(.4);
+    filter: brightness(.3);
     transition: transform 750ms cubic-bezier(.5, 0, .5, 1), opacity 250ms linear;
 }
 
@@ -554,7 +557,7 @@ a:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--clr-one);
+    color: var(--clr-two);
     font-size: 1.5rem;
     text-align: center;
     pointer-events: none;

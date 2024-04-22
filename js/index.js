@@ -20,7 +20,7 @@ const projects = {
         skills: ['BERT Model', 'NLP', 'Model Validation Testing','Streamlit', 'Database Querying', 'SQL'],
     },
     'project3': {
-        title: 'Disambiguating the World\'s Inventors',
+        title: 'Machine Learning for Clarifying Patent Inventor',
         subtitle: 'Using NLP and deep learning to classify patents by inventors on a world scale.',
         organization: 'Master of Engineering Capstone Project',
         dates: 'September 2023 - May 2024',
