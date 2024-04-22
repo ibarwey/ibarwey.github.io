@@ -47,6 +47,17 @@ const projects = {
         skills: ['Data Scraping', 'Data Mining', 'Data Visualizatoin'],
         image: 'img/word_cloud.png'
     },
+    'project6': {
+        title: 'Parrot.ai - Language Practice Made Fun',
+        subtitle: 'ChatBot iOS app for practicing languages with live feedback and scoring system.',
+        organization: 'Scale\'s Generative AI Hackathon for Womxn',
+        dates: 'April 2024',
+        summary: 'Teammate Kasey Lee and I worked to create an iOS app with Swift which intends to make language practice more accessible for those without people to practice with. We use GPT 3.5 API to facilitate easy conversation with the bot. On top of this, we use Sapling\'s API to check the grammar of the sender\'s messages, providing real-time feedback in the conversation to help the user learn. This is a work-in-progress, and we intend to add a game element in which the user recieves a score on their performance after each conversation.',
+        skills: ['GPT 3.5', 'Swift', 'API Integration', 'Generative AI'],
+        link: 'https://github.com/ibarwey/ParrotChat',
+        linktext: "Github",
+        image: 'img/parrot_demo.png'
+    }
 };
 
 // Get all tabs
